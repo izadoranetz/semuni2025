@@ -1,0 +1,94 @@
+.lista-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+}
+
+.lista-livros {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.livro-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &.concluido {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+
+    h3 {
+      text-decoration: line-through;
+      color: #666;
+    }
+  }
+
+  .livro-info {
+    h3 {
+      margin: 0 0 8px 0;
+      color: #333;
+    }
+
+    p {
+      margin: 4px 0;
+      color: #666;
+    }
+  }
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .toggle-slider {
+      background-color: #4caf50;
+    }
+
+    &:checked + .toggle-slider:before {
+      transform: translateX(26px);
+    }
+  }
+
+  .toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<form [formGroup]="formularioLivro" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-field">
+    <label for="titulo">Título:</label>
+    <input id="titulo" type="text" formControlName="titulo" placeholder="Digite o título do livro">
+  </div>
+
+  <div class="form-field">
+    <label for="autor">Autor:</label>
+    <input id="autor" type="text" formControlName="autor" placeholder="Digite o nome do autor">
+  </div>
+
+  <div class="form-field">
+    <label for="paginasLidas">Páginas Lidas:</label>
+    <input id="paginasLidas" type="number" formControlName="paginasLidas" min="0">
+  </div>
+
+  <button type="submit" [disabled]="!formularioLivro.valid">Adicionar Livro</button>
+</form>

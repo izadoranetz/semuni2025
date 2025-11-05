@@ -1,0 +1,24 @@
+<div class="lista-container">
+  <h2>Minhas Leituras</h2>
+  
+  <div class="lista-livros">
+    <div *ngFor="let livro of livros$ | async" 
+         class="livro-item"
+         [class.concluido]="livro.concluido">
+      <div class="livro-info">
+        <h3>{{ livro.titulo }}</h3>
+        <p>Autor: {{ livro.autor }}</p>
+        <p>Páginas Lidas: {{ livro.paginasLidas }}</p>
+      </div>
+      
+      <div class="livro-actions">
+        <label class="toggle">
+          <input type="checkbox"
+                 [checked]="livro.concluido"
+                 (change)="onToggleConcluido(livro)">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

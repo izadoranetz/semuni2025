@@ -1,0 +1,13 @@
+<div class="badge-container" [class.master]="ehMaster$ | async">
+  <ng-container *ngIf="ehMaster$ | async; else progressBadge">
+    <div class="badge-master">
+      🏆 Leitor Master! 10+ Livros Concluídos
+    </div>
+  </ng-container>
+  
+  <ng-template #progressBadge>
+    <div class="badge-progress">
+      Concluídos: {{ totalConcluidos$ | async }}/10
+    </div>
+  </ng-template>
+</div>
