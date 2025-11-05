@@ -77,3 +77,5 @@ Integração:
 * Usar o prompt para levantar possíveis causas antes
 * Dividir o problema em partes (isolamento sistemático)
 * Utilizar os recursos da IA para entender e analisar o fluxo de dados
+
+---
