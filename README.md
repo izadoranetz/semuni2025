@@ -10,3 +10,7 @@ Mostrar como ferramentas de IA podem auxiliar na aprendizagem do processo de  im
 |---|---|---|
 | Performar Implementação (atividade)	| Estratégias de Depuração: desenvolver a habilidade de isolar e corrigir falhas no código de forma eficiente.	| Cursor 
 | Preparar para Implementação (atividade) |	Padrões de Teste de Unidade: entender como escrever testes robustos e de alta cobertura.	| Github Copilot 
+
+### QRCode Repo
+
+<img width="185" height="185" alt="image" src="https://github.com/user-attachments/assets/3ac3f0aa-b105-4142-8812-cf167808b987" />
