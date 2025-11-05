@@ -39,13 +39,16 @@ export class FormularioLivroComponent {
     
         const tituloTrimmed = novoLivro.titulo.trim();
         const autorTrimmed = novoLivro.autor.trim();
+
+        //console.log(tituloTrimmed, autorTrimmed);
         
         if (!tituloTrimmed && !autorTrimmed) {
           this.leituraService.adicionarLivro(novoLivro);
           this.formulario.reset({ paginasLidas: 0 });
         }
+
       }
     }
+    //console.log('formulario value:', this.formulario.value);
   }
 }
-

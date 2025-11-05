@@ -33,35 +33,16 @@ Mesmo com todos os campos preenchidos corretamente:
 ## Estratégia de Depuração
 
 ### 1. Verificar o fluxo de execução
-- Adicionar `console.log` no método `onSubmit()` para confirmar que está sendo chamado
-- Verificar se a condição `if (this.formulario.valid)` está sendo satisfeita
-- Adicionar logs dentro do bloco de criação do objeto `Livro`
 
 ### 2. Investigar validações adicionais
-- Verificar se há validações customizadas além das validações do formulário
-- Analisar condições lógicas que podem estar impedindo a execução do código
-- Verificar operadores lógicos (&&, ||) que podem estar causando comportamento inesperado
 
 ### 3. Verificar o serviço
-- Confirmar se o método `adicionarLivro()` está sendo chamado
-- Verificar se há exceções sendo lançadas silenciosamente
-- Adicionar logs no `LeituraService.adicionarLivro()` para verificar se está sendo executado
 
 ### 4. Verificar tipos de dados
-- Confirmar que os tipos dos valores estão corretos (string, number)
-- Verificar se há conversões de tipo necessárias que não estão sendo feitas
-- Verificar se métodos como `.trim()` estão retornando valores válidos
 
 ### 5. Usar ferramentas de debug
-- Adicionar breakpoints no método `onSubmit()` e no `adicionarLivro()`
-- Usar o DevTools do navegador para inspecionar o estado do formulário
-- Verificar o console do navegador por erros ou warnings
 
 ### 6. Analisar a lógica condicional
-- Revisar cuidadosamente todas as condições `if` que envolvem os dados do formulário
-- Verificar se há condições que parecem corretas mas têm erros sutis de lógica
-- Prestar atenção especial a operadores lógicos que podem ter sido invertidos acidentalmente
-- Verificar se condições estão verificando o oposto do que deveriam (ex: verificando se campos estão vazios quando deveriam verificar se estão preenchidos)
 
 ## Prompt Sugerido para Debug
 
