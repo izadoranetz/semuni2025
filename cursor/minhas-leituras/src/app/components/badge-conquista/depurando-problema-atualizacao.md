@@ -15,5 +15,7 @@ Selecione o código do componente `badge-conquista.component.ts` e abra o chat (
 **Prompt sugerido:**
 ```
 A contagem de livros e atualização do badge não está atualizando automaticamente. 
-Levante 3 causa possíveis.
+Me ajude a debugar esse código.
+
+@AGENTS.md
 ```

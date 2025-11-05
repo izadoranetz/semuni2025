@@ -168,4 +168,3 @@ O objetivo não é apenas **resolver o bug**, mas **elevar o conhecimento** do d
 - Aplicar os conceitos aprendidos em outras situações
 - Escrever código mais robusto e seguir boas práticas
 - Entender profundamente o framework Angular
-
