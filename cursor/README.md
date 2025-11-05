@@ -30,6 +30,14 @@ Sistema de gamificação para incentivar leitura:
 
 ## 3. Configurando o ambiente de aprendizagem 
 
+Antes de entrar nas funcionalidades do Cursor, alguns pontos interessantes do Angular:
+
+https://angular.dev/ai/develop-with-ai
+
+* Opções de prompts customizados e instruções de sistema
+* Arquivos de regras para providenciar contexto mais crítico para as LLMs
+* Fornencendo contexto com `llms.txt`
+
 Algumas funcionalidades do Cursor para Debug:
 
 #### A. Chat Contextual (Cmd/Ctrl + L)
