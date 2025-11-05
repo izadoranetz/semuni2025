@@ -1,0 +1,61 @@
+.badge-conquista {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &.master {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+
+    .badge-content {
+      color: #333;
+    }
+  }
+
+  .badge-content {
+    text-align: center;
+    font-size: 1.125rem;
+    color: #666;
+
+    &.master-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      font-weight: 600;
+      font-size: 1.5rem;
+
+      .trophy {
+        font-size: 2rem;
+        animation: bounce 1s ease-in-out infinite;
+      }
+    }
+
+    .text {
+      display: block;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+

@@ -1,0 +1,35 @@
+<div class="lista-leituras">
+  <h2>Minhas Leituras</h2>
+  
+  @if (livros.length === 0) {
+    <p class="empty-message">Nenhum livro cadastrado ainda. Adicione seu primeiro livro!</p>
+  } @else {
+    <div class="livros-grid">
+      @for (livro of livros; track livro.id) {
+        <div class="livro-card" [class.concluido]="livro.concluido">
+          <div class="livro-header">
+            <h3>{{ livro.titulo }}</h3>
+            <label class="toggle-concluido">
+              <input
+                type="checkbox"
+                [checked]="livro.concluido"
+                (change)="onToggleConcluido(livro)"
+              />
+              <span>Concluído</span>
+            </label>
+          </div>
+          
+          <div class="livro-info">
+            <p class="autor"><strong>Autor:</strong> {{ livro.autor }}</p>
+            <p class="paginas"><strong>Páginas Lidas:</strong> {{ livro.paginasLidas }}</p>
+          </div>
+          
+          @if (livro.concluido) {
+            <div class="badge-concluido">✓ Concluído</div>
+          }
+        </div>
+      }
+    </div>
+  }
+</div>
+

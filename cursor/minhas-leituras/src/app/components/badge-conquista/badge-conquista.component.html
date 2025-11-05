@@ -1,0 +1,13 @@
+<div class="badge-conquista" [class.master]="isMaster">
+  @if (isMaster) {
+    <div class="badge-content master-badge">
+      <span class="trophy">🏆</span>
+      <span class="text">Leitor Master! 10+ Livros Concluídos</span>
+    </div>
+  } @else {
+    <div class="badge-content">
+      <span class="text">Concluídos: {{ totalConcluidos }}/{{ LIMITE_CONQUISTA }}</span>
+    </div>
+  }
+</div>
+

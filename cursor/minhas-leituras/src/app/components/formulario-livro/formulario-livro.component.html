@@ -1,0 +1,51 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="formulario-livro">
+  <h2>Adicionar Novo Livro</h2>
+  
+  <div class="form-group">
+    <label for="titulo">Título *</label>
+    <input
+      id="titulo"
+      type="text"
+      formControlName="titulo"
+      placeholder="Digite o título do livro"
+      class="form-control"
+    />
+    @if (formulario.get('titulo')?.invalid && formulario.get('titulo')?.touched) {
+      <span class="error-message">Título é obrigatório</span>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="autor">Autor *</label>
+    <input
+      id="autor"
+      type="text"
+      formControlName="autor"
+      placeholder="Digite o nome do autor"
+      class="form-control"
+    />
+    @if (formulario.get('autor')?.invalid && formulario.get('autor')?.touched) {
+      <span class="error-message">Autor é obrigatório</span>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="paginasLidas">Páginas Lidas *</label>
+    <input
+      id="paginasLidas"
+      type="number"
+      formControlName="paginasLidas"
+      min="0"
+      placeholder="0"
+      class="form-control"
+    />
+    @if (formulario.get('paginasLidas')?.invalid && formulario.get('paginasLidas')?.touched) {
+      <span class="error-message">Páginas lidas deve ser maior ou igual a 0</span>
+    }
+  </div>
+
+  <button type="submit" [disabled]="formulario.invalid" class="btn-submit">
+    Adicionar Livro
+  </button>
+</form>
+
