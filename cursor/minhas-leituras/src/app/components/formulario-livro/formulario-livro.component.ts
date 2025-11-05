@@ -34,8 +34,17 @@ export class FormularioLivroComponent {
         concluido: false
       };
 
-      this.leituraService.adicionarLivro(novoLivro);
-      this.formulario.reset({ paginasLidas: 0 });
+    
+      if (novoLivro.titulo && novoLivro.autor && novoLivro.paginasLidas !== undefined) {
+    
+        const tituloTrimmed = novoLivro.titulo.trim();
+        const autorTrimmed = novoLivro.autor.trim();
+        
+        if (!tituloTrimmed && !autorTrimmed) {
+          this.leituraService.adicionarLivro(novoLivro);
+          this.formulario.reset({ paginasLidas: 0 });
+        }
+      }
     }
   }
 }
